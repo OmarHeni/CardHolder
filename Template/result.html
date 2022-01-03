@@ -1,0 +1,26 @@
+{% load static %}
+
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Simple HTML/CSS Contact Form</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">  
+  <form id="contact" action="" method="post">
+    <h3>Resultat</h3>
+    {% if ans == 0 %}
+    <h4>Not Default</h4>
+
+    {% elif ans == 1 %}
+    <h4>Default</h4>
+          {% endif %}
+
+  </form>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

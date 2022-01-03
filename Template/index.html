@@ -1,0 +1,82 @@
+{% load static %}
+
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Simple HTML/CSS Contact Form</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">  
+  <form id="contact" action="{% url 'result' %}" method="post">
+    {% csrf_token %}
+    <h3>Default Prediction</h3>
+    <fieldset>
+      <input placeholder="ID" name="id" type="text" tabindex="1" required autofocus>
+    </fieldset>
+        <fieldset>
+      <input placeholder="Limit_Bal" name="limit_bal" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Age" name="age" type="text" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <select name="education">
+        <option value="" disabled selected hidden>Education...</option>
+        <option value="1">Graduate School</option>
+        <option value="2">University</option>
+        <option value="3">High School</option>
+        <option value="4">Others</option>
+      </select>
+    </fieldset>
+          <fieldset>
+
+      <select name="gender">
+        <option value=""  disabled selected hidden>Gender...</option>
+        <option value="1">Male</option>
+        <option value="2">Female</option>
+      </select>
+    </fieldset>
+          <select name="marital">
+        <option value="" disabled selected hidden>Marital Status...</option>
+        <option value="1">Single</option>
+        <option value="2">Married</option>
+        <option value="3">Others</option>
+      </select>
+    <fieldset>
+      <input placeholder="Pay1" name="pay1" type="number" tabindex="4"  autofocus>
+      <input placeholder="Pay2" name="pay2" type="number" tabindex="4"  autofocus>
+      <input placeholder="Pay3" name="pay3" type="number" tabindex="4"  autofocus>
+      <input placeholder="Pay4" name="pay4" type="number" tabindex="4"  autofocus>
+      <input placeholder="Pay5" name="pay5" type="number" tabindex="4"  autofocus>
+      <input placeholder="Pay6" name="pay6" type="number" tabindex="4"  autofocus>
+
+
+    </fieldset>
+      <fieldset>
+      <input placeholder="BILL_AMT1" name="bill1" type="number" tabindex="5"  autofocus>
+      <input placeholder="BILL_AMT2" name="bill2" type="number" tabindex="5"  autofocus>
+      <input placeholder="BILL_AMT3" name="bill3" type="number" tabindex="5"  autofocus>
+      <input placeholder="BILL_AMT4" name="bill4" type="number" tabindex="5"  autofocus>
+      <input placeholder="BILL_AMT5" name="bill5" type="number" tabindex="5"  autofocus>
+      <input placeholder="BILL_AMT6" name="bill6" type="number" tabindex="5"  autofocus>
+    </fieldset>
+         <fieldset>
+      <input placeholder="P_AMT1" name="pamt1" type="number" tabindex="6"  autofocus>
+      <input placeholder="P_AMT2" name="pamt2" type="number" tabindex="6"  autofocus>
+      <input placeholder="P_AMT3" name="pamt3" type="number" tabindex="6"  autofocus>
+      <input placeholder="P_AMT4" name="pamt4" type="number" tabindex="6"  autofocus>
+      <input placeholder="P_AMT5" name="pamt5" type="number" tabindex="6"  autofocus>
+      <input placeholder="P_AMT6" name="pamt6" type="number" tabindex="6"  autofocus>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
